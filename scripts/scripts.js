@@ -36,6 +36,7 @@ export function Clock() {
     this.timezone = '"' + `GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(1, '0')}` + '"';
     //add remaining day
     this.remaining_day = 0;
+    this.note = '"' + 'CV to submit' + '"';
 
     if (this.hour < 12) {
         this.period = '"AM"';
@@ -58,6 +59,7 @@ export function Filter() {
     this.change_font_family = "Fira Code, monospace";
     this.change_ide_theme = "VSCodeDarkModern";
     this.specific_day = undefined;
+    this.note = undefined;
 }
 
 export function changeTo12hFormat(hour) {
@@ -103,6 +105,11 @@ export function calculateRemainingDay(specific_day, object) {
     }
 }
 
+export function showNote(note, object) {
+    if (note !== undefined) {
+        object['note'] = '"' + note + '"';
+    }
+}
 
 export function addLeadingZero(num) {
     if (num < 10) {
@@ -190,10 +197,10 @@ export function updateAllClockElement(object) {
     updateElementValue(object, 'month');
     updateElementValue(object, 'year');
     updateElementValue(object, 'weekOfYear');
+    updateElementValue(object, 'note')
     updateElementValue(object, 'remaining_day');
     updateElementValue(object, 'unix');
     updateElementValue(object, 'timezone')
-
     const paragraphs = document.getElementById('object_clock').getElementsByTagName('p');
     let lastParagraph = null;
 
@@ -253,6 +260,7 @@ export function updateClock(object, filter) {
     changeLineHeight(filter.change_line_height);
     changeFontFamily(filter.change_font_family);
     changeIdeTheme(filter.change_ide_theme);
+    showNote(filter.note, object);
     calculateRemainingDay(filter.specific_day, object);
     // toggleElement(!filter.show_dayName_flag, 'day_name', 'inline');
     // toggleElement(!filter.show_dayName_flag, 'list_bracket_start', 'inline');

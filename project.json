@@ -175,10 +175,18 @@
 				"type" : "bool",
 				"value" : false
 			},
-			"ui_show_due_day":
+			"ui_show_note":
 			{
 				"index": 12,
 				"order": 112,
+				"text": "Note",
+				"type": "textinput",
+				"value": "CV to submit"
+			},
+			"ui_show_due_day":
+			{
+				"index": 13,
+				"order": 113,
 				"text": "Due day",
 				"type": "textinput",
 				"value": "20241101"
