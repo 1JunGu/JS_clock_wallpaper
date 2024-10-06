@@ -33,6 +33,10 @@ samp {
     src: url("SourceCodePro-Regular.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "LXGWWenKai";
+    src: url("LXGWWenKaiMonoGBScreen.woff2") format("woff2");
+}
 
 *,
 :before,
@@ -46,7 +50,7 @@ html, body {
     color: #a9b7c6;
 
     font-size: 32px;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "LXGWWenKai";
 }
 
 body {

@@ -10,6 +10,9 @@ window.wallpaperPropertyListener = {
         if (properties.ui_use_12h_format) {
             filter.use_12h_format_flag = properties.ui_use_12h_format.value;
         }
+        if (properties.ui_show_due_day) {
+            filter.specific_day = properties.ui_show_due_day.value;
+        }
         if (properties.ui_hide_seconds) {
             filter.hide_seconds_flag = properties.ui_hide_seconds.value;
         }

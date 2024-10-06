@@ -34,6 +34,8 @@ export function Clock() {
     const timeZoneOffsetHours = Math.abs(Math.floor(timeZoneOffsetInMinutes / 60));
     const timeZoneSign = timeZoneOffsetInMinutes > 0 ? '-' : '+'; 
     this.timezone = '"' + `GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(1, '0')}` + '"';
+    //add remaining day
+    this.remaining_day = 0;
 
     if (this.hour < 12) {
         this.period = '"AM"';
@@ -53,8 +55,9 @@ export function Filter() {
     this.show_dayName_flag = undefined;
     this.change_font_size = 32;
     this.change_line_height = 1.2;
-    this.change_font_family = "JetBrains Mono, monospace";
-    this.change_ide_theme = "PycharmDarcula";
+    this.change_font_family = "Fira Code, monospace";
+    this.change_ide_theme = "VSCodeDarkModern";
+    this.specific_day = undefined;
 }
 
 export function changeTo12hFormat(hour) {
@@ -72,6 +75,34 @@ export function use12hFormat(flag, object) {
         object['hour'] = changeTo12hFormat(object['hour']);
     }
 }
+
+export function calculateRemainingDay(specific_day, object) {
+    //const current_day = object['day'];
+    //const current_month = object['month'];
+    //const current_year = object['year'];
+    ////specific_day is a string like "202401101", convert it to a date
+    //const specific_day_date = new Date(specific_day.slice(0, 4), specific_day.slice(4, 6) - 1, specific_day.slice(6, 8));
+    //const current_day_date = new Date(current_year, current_month, current_day);
+    //const time_diff = specific_day_date.getTime() - current_day_date.getTime();
+    //const remaining_day = Math.floor(time_diff / (1000 * 60 * 60 * 24));
+    //object['remaining_day'] = remaining_day;
+    let time = new Date();
+    if (specific_day === undefined) {
+        const current_date = new Date(time.getFullYear(), time.getMonth(), time.getDate());
+        const specific_date = new Date(2024, 11, 1);
+        const time_diff = specific_date.getTime() - current_date.getTime();
+        object['remaining_day'] = Math.ceil(time_diff / (1000 * 60 * 60 * 24));
+    } else {
+        //const current_date = new Date(object['year'], object['month'].replace(/"/g, '') - 1, object['day']);
+        //const time_diff = specific_date.getTime() - current_date.getTime();
+        //object['remaining_day'] = Math.ceil(time_diff / (1000 * 60 * 60 * 24));
+        const current_date = new Date(time.getFullYear(), time.getMonth(), time.getDate());
+        const specific_date = new Date(specific_day.slice(0, 4), specific_day.slice(4, 6) - 1, specific_day.slice(6, 8));
+        const time_diff = specific_date.getTime() - current_date.getTime();
+        object['remaining_day'] = Math.ceil(time_diff / (1000 * 60 * 60 * 24));
+    }
+}
+
 
 export function addLeadingZero(num) {
     if (num < 10) {
@@ -159,6 +190,7 @@ export function updateAllClockElement(object) {
     updateElementValue(object, 'month');
     updateElementValue(object, 'year');
     updateElementValue(object, 'weekOfYear');
+    updateElementValue(object, 'remaining_day');
     updateElementValue(object, 'unix');
     updateElementValue(object, 'timezone')
 
@@ -221,6 +253,7 @@ export function updateClock(object, filter) {
     changeLineHeight(filter.change_line_height);
     changeFontFamily(filter.change_font_family);
     changeIdeTheme(filter.change_ide_theme);
+    calculateRemainingDay(filter.specific_day, object);
     // toggleElement(!filter.show_dayName_flag, 'day_name', 'inline');
     // toggleElement(!filter.show_dayName_flag, 'list_bracket_start', 'inline');
     // toggleElement(!filter.show_dayName_flag, 'list_comma', 'inline');
