@@ -1,0 +1,37 @@
+html, body {
+    color: #080808;
+
+    font-family: "JetBrains Mono", monospace, monospace;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.variable_name{
+    color: #000000;
+}
+
+.typehint{
+    color: #000000;
+}
+
+.comma{
+    color: #080808;
+}
+
+.operator {
+    color: #080808;
+}
+
+.bracket {
+    color: #080808;
+}
+
+.number {
+    color: #1750eb;
+}
+
+.string {
+    color: #067d17;
+}

@@ -1,0 +1,190 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "[h2]\"Python Dictionary Clock\" is a html-based wallpaper. Simple and highly customisable.[/h2]\n\nThemes:\n• Pycharm Darcula\n• Github Dark\n• Github Light\n• IntellijLight\n• Material Darker\n• VSCode Dark Modern\n• Monokai Pro\n• Atom One Dark\n• SynthWave '84\n• Dracula\n• MonokaiPro\n\n\nSettings:\n• 24/12 o'clock format\n• Show/Hide seconds\n• Show/Hide period (PM/AM)\n• Show/Hide timezone\n• Show/Hide UNIX Timestamp\n• Show/Hide type hint\n• Show/Hide day name\n• Show/Hide the leading zero (convert a numeric value to a string value)\n• Change font size\n• Change font family\n\nFont family:\n• JetBrains Mono,\n• Fira Code,\n• Source Code Pro\n\nThis project was inspired by unktir's project: js object - clock.\n\n[h3]Links:\n[url=https://steamcommunity.com/id/unktir]unktir profile[/url]\nunktir's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2986163106]js object - clock[/url][/h3]",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"ide_theme" : 
+			{
+				"index" : 11,
+				"options" : 
+				[
+					{
+						"label" : "Pycharm Darcula",
+						"value" : "PycharmDarcula"
+					},
+					{
+						"label" : "Github Dark",
+						"value" : "GithubDark"
+					},
+					{
+						"label" : "Material Darker",
+						"value" : "MaterialDarker"
+					},
+					{
+						"label" : "VSCode Dark Modern",
+						"value" : "VSCodeDarkModern"
+					},
+					{
+						"label" : "Intellij Light",
+						"value" : "IntellijLight"
+					},
+					{
+						"label" : "Github Light",
+						"value" : "GithubLight"
+					},
+					{
+						"label" : "Atom One Dark",
+						"value" : "AtomOneDark"
+					},
+					{
+						"label" : "SynthWave '84",
+						"value" : "SynthWave84"
+					},
+					{
+						"label" : "Dracula",
+						"value" : "Dracula"
+					},
+					{
+						"label" : "Monokai Pro",
+						"value" : "MonokaiPro"
+					}
+				],
+				"order" : 111,
+				"text" : "Theme",
+				"type" : "combo",
+				"value" : "PycharmDarcula"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.1411764705882353 0.1607843137254902 0.1803921568627451"
+			},
+			"ui_font_family" : 
+			{
+				"index" : 10,
+				"options" : 
+				[
+					{
+						"label" : "JetBrains Mono",
+						"value" : "JetBrains Mono, monospace"
+					},
+					{
+						"label" : "Fira Code",
+						"value" : "Fira Code, monospace"
+					},
+					{
+						"label" : "Source Code Pro",
+						"value" : "Source Code Pro, monospace"
+					}
+				],
+				"order" : 110,
+				"text" : "Font family",
+				"type" : "combo",
+				"value" : "JetBrains Mono, monospace"
+			},
+			"ui_font_size" : 
+			{
+				"fraction" : false,
+				"index" : 8,
+				"max" : 64,
+				"min" : 16,
+				"order" : 108,
+				"text" : "Font size",
+				"type" : "slider",
+				"value" : 48
+			},
+			"ui_hide_period" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "Hide period (PM/AM)",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_hide_seconds" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Hide seconds",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_hide_timezone" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "Hide timezone",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_line_height" : 
+			{
+				"fraction" : true,
+				"index" : 9,
+				"max" : 2,
+				"min" : 1,
+				"order" : 109,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Line height",
+				"type" : "slider",
+				"value" : 1.2
+			},
+			"ui_show_day_name" : 
+			{
+				"index" : 7,
+				"order" : 107,
+				"text" : "Show day name",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_leading_zero" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Show leading zero",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_unix" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "Show UNIX",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_use_12h_format" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Use 12h format",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_use_typehint" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "Use Type Hint",
+				"type" : "bool",
+				"value" : false
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"tags" : [ "Technology" ],
+	"title" : "Python Dictionary Clock",
+	"type" : "web",
+	"version" : 6,
+	"visibility" : "public",
+	"workshopid" : "3007669757",
+	"workshopurl" : "steam://url/CommunityFilePage/3007669757"
+}
