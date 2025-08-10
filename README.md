@@ -19,7 +19,7 @@ This repository is aimed to host a wallpaper to display time and countdown **via
 
 
 ## Results
-If successfuly, you would see this in your desktop.
+If successfully, you would see this in your desktop.
 <img src="preview.jpg" width=80%>
 
 
